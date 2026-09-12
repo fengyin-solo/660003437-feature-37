@@ -1,11 +1,12 @@
 export interface WordNode {
   id: string; word: string; language: string; meaning: string
   family: string; era?: string; x?: number; y?: number
+  rootIndex?: number
 }
 export interface WordLink {
   source: string; target: string
   type: 'cognate' | 'derived' | 'borrowed' | 'reconstructed'
-  description?: string
+  description?: string; rootIndex?: number
 }
 export interface CognateSet {
   root: string; meaning: string
